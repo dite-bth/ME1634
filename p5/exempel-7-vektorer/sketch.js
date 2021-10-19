@@ -11,6 +11,9 @@ var hastighet;
 function setup() {
   createCanvas(852, 480);
 
+  // I detta exempel använder vi vektorer för att hantera "bollens" position och rörelse
+  // Funktionen createVector skapar en vektor som har både en x/y-position och en riktning
+  // Detta kan vi använda för att ge bollen en hastighet i en viss riktning
   boll = createVector(width/2, height/2);
   hastighet = createVector(random(-5, 5), random(-5, 5));
 }
