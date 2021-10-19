@@ -21,9 +21,9 @@ function draw() {
     // Vi kan skapa egna funktioner för att strukturera vår kod.
     // En funktion har inparametrar och ett returvärde
     // Med hjälp av en funktion väljer vi en färg för ellipserna baserat på om de har en udda eller jämn position
-    // Som inparameter skickar vi med i + 1 eftersom i börjar från 0 (som är position 1)
+    // Som inparameter skickar vi med i
     // Vi tar emot returvärdet och lagrar det i en variabel
-    let color = colorOddEven(i + 1);
+    let color = colorOddEven(i);
     fill(color);
     
     // Rita ut en ellips via en funktion
