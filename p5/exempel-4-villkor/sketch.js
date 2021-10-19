@@ -21,7 +21,6 @@ function draw() {
 
     // Vi använder ett villkor för att rita ut en ellips eller en rektangel baserat på om det är en udda eller jämn position
     // if och else betyder att om villkoret "position % 2 == 0" är uppfyllt så ska en ellips ritas, annars en rektangel.
-    // Eftersom i börjar från 0 lägger vi till 1 för att det är position 1
     let position = i;
     if( position % 2 == 0 ) {
       ellipse(xPos, 50, 60, 60);
