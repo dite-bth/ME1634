@@ -26,7 +26,7 @@ function draw() {
   // Rita ut "bollen" på nuvarande position
   ellipse(boll.x, boll.y, 80, 80);
 
-  // Uppdatera "bollens" position med hastigheten
+  // Uppdatera "bollens" position med hastigheten geom att lägga på en vektor
   boll.add(hastighet);
 
   // Anropa en funktion för att kolla om bollen är på väg ur bild
