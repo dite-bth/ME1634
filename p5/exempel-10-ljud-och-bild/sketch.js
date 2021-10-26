@@ -9,7 +9,7 @@ var bgSound = null; // En variabel för att hålla et ljud
 
 var x, y;
 
-//Nu ska vi använda funktionen preload för att ladda in saker som bilder och ljud innan programmet startar
+// Nu ska vi använda funktionen preload för att ladda in saker som bilder och ljud innan programmet startar
 function preload() {
   bgImage = loadImage("bgimage.jpg");
   bgSound = loadSound("bgDrone.wav");
