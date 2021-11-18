@@ -31,7 +31,7 @@ function setup() {
 }
 
 function draw() {
-  // Den pixelarray som skapas via loadPixels() håller alla pixlar i canvasenp5.BandPass()
+  // Den pixelarray som skapas via loadPixels() håller alla pixlar i canvasen
   // Arrayen blir 4 ggr så lång som antalet pixlar eftersom R, G, B och Alpha-värdena lagras var för sig efter varandra för varje pixel
   // För att välja rätt position i arrayen baserat på muspekaren måste vi alltså multiplicera bredden med muspekarens y-potition
   // och sedan lägga till x-positionen. Detta multipliceras sedan med 4 på grund av ovanstående, (varje pixel representeras med fyra värden)
