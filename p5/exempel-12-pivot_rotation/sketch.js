@@ -26,11 +26,15 @@ function draw() {
   translate(100, 100);
   rotate(angle);
   image(myImage, 0, 0, 100, 100);
+  fill(255,0,0);
+  ellipse(0,0, 10)
   pop();
 
   // Här roterar bilden kring sit övre vänstra hörn vilket är standard
   push();
   translate(200, 50);
+  fill(255,0,0);
+  ellipse(0,0, 10)
   rotate(angle);
   image(myImage, 0, 0, 100, 100);
   pop();
@@ -42,6 +46,8 @@ function draw() {
   let pivotX = 50;
   let pivotY = 100;
   translate(50 + pivotX, 200 + pivotY);
+  fill(255,0,0);
+  ellipse(0,0, 10)
   rotate(angle);
   translate(-pivotX, -pivotY);
   image(myImage, 0, 0, 100, 100);
@@ -52,6 +58,8 @@ function draw() {
   pivotX = 100;
   pivotY = 100;
   translate(200 + pivotX, 200 + pivotY);
+  fill(255,0,0);
+  ellipse(0,0, 10)
   rotate(angle);
   translate(-pivotX, -pivotY);
   image(myImage, 0, 0, 100, 100);
