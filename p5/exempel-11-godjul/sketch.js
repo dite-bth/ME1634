@@ -81,7 +81,8 @@ function drawGlowText(txt, x, y) {
 
       //Rita ut "glow" med mycket transparens
       textSize(72);
-      stroke(255, 255, 0, 10);
+      stroke(255, 200, 0, 10);
+      fill(0,0);
       for( let i=2 ; i<=5 ; i++) {
         strokeWeight(i*i);
         text(txt, 0, 0);  
