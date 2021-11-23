@@ -108,19 +108,40 @@ function go() {
   //print("Num PixelParticles generated: " + (pixelIndex));
 }
 
+// Draw function
+// This function iterates throgh all pixel particles and calls the method move and display on each one
 function draw() {
+  // set the background to black
   background(0, 0, 0);
+  
+  //Uncomment the line below if you want orbit control using the mouse
   //orbitControl();
 
-  ellipse(mouseX - width/2, mouseY - height/2, 10, 10);
+  // turn off stroke
   noStroke();
-  push();  
+  
+  // set fill color to white
+  fill(color(255, 255, 255)); 
+
+  // draw an ellipse at the mouse coordinates. The mouse coordinates has to be compensated
+  // because we're using WEBGL thats puts the center in the middle of the canvas, instead of the 
+  // upper left corner
+  ellipse(mouseX - width/2, mouseY - height/2, 5, 5);
+  
+   // push a new transform context to the stack
+  push();
+    // translate this transform context so that the the center of all pixel particles becomes 0,0,0
     translate(-img.width/2,-img.height/2);
+
+    // Iterate through each pixel particle in the array and call the method move and display on each one
+    // The mouse coordinates has to be compensated for this transform context. Maybe theres a more accurate solution
+    // but this kinda works :)
     for(let i = 0; i < numPixels; i++ ) {
       if(pixelParticles[i] != null) {   
         pixelParticles[i].move(createVector(mouseX - width/2+img.width/2, mouseY - height/2+img.height/2, 0));
         pixelParticles[i].display();
       }
     }
+   // pop the transform context from the stack
   pop();
 }
